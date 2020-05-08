@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+    <tlib-version>1.0</tlib-version>
+    <short-name>tag</short-name>
+    <uri>/WEB-INF/tlds/taglib</uri>
+    <tag>
+        <name>nav</name>
+        <tag-class>com.tag.NavTag</tag-class>
+        <body-content>empty</body-content>
+        <description>Left navigation bar</description>
+        <attribute>
+            <name>role</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>username</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>nickname</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>activeOn</name>
+            <required>false</required>
+            <type>java.lang.String</type>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+  
+    <tag>
+        <name>sList</name>
+        <tag-class>com.tag.StudentList</tag-class>
+        <body-content>empty</body-content>
+        <description>StudentList</description>
+        <attribute>
+            <name>classId</name>
+            <required>false</required>
+            <type>java.lang.String</type>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+  
+    <tag>
+        <name>tList</name>
+        <tag-class>com.tag.TeacherList</tag-class>
+        <body-content>empty</body-content>
+        <description>Teacher list</description>
+    </tag>
+  
+    <tag>
+        <name>mList</name>
+        <tag-class>com.tag.ModuleList</tag-class>
+        <body-content>empty</body-content>
+        <description>Module list</description>
+        <attribute>
+            <name>editable</name>
+            <required>false</required>
+            <type>java.lang.boolean</type>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    <tag>
+        <name>courseList</name>
+        <tag-class>com.tag.CourseList</tag-class>
+        <body-content>empty</body-content>
+        <description>Course list</description>
+        <attribute>
+            <name>user</name>
+            <required>false</required>
+            <type>java.lang.String</type>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    <tag>
+        <name>attendanceList</name>
+        <tag-class>com.tag.AttendanceList</tag-class>
+        <body-content>empty</body-content>
+        <description>Course Attendance List</description>
+        <attribute>
+            <name>courseId</name>
+            <required>true</required>
+            <type>java.lang.Integer</type>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    <tag>
+        <name>stuAttendList</name>
+        <tag-class>com.tag.AttendanceList_Student</tag-class>
+        <body-content>empty</body-content>
+        <description>Student Attendance List</description>
+        <attribute>
+            <name>studentId</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    <tag>
+        <name>stuLessonList</name>
+        <tag-class>com.tag.LessonList_Student</tag-class>
+        <body-content>empty</body-content>
+        <description>Student's Lesson List</description>
+        <attribute>
+            <name>studentId</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>courseId</name>
+            <required>true</required>
+            <type>java.lang.Integer</type>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    <tag>
+        <name>lessonList</name>
+        <tag-class>com.tag.LessonList</tag-class>
+        <body-content>empty</body-content>
+        <description>Lesson List</description>
+        <attribute>
+            <name>courseId</name>
+            <required>true</required>
+            <type>java.lang.Integer</type>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+  
+    <!-- A validator verifies that the tags are used correctly at JSP
+          translation time. Validator entries look like this: 
+       <validator>
+           <validator-class>com.mycompany.TagLibValidator</validator-class>
+           <init-param>
+              <param-name>parameter</param-name>
+              <param-value>value</param-value>
+           </init-param>
+       </validator>
+    -->
+    <!-- A tag library can register Servlet Context event listeners in
+         case it needs to react to such events. Listener entries look
+         like this: 
+      <listener>
+          <listener-class>com.mycompany.TagLibListener</listener-class> 
+      </listener>
+    -->
+</taglib>
